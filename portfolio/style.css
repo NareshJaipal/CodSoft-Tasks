@@ -1,0 +1,256 @@
+:root {
+  --bg-primary: #14131a;
+  --bg-secondary: #1c1b23ba;
+  --btn-primary: #050114;
+  --text-primary: #8b8a91;
+  --border-color: #116ff3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+}
+
+/* --------------- */
+/* NavBar Styling */
+/* --------------- */
+
+nav {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  background-color: var(--bg-secondary);
+
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navWrapper {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 10px;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0px;
+  background-color: var(--text-primary);
+  bottom: 0;
+  left: 0;
+  transition: 0.3s all ease-in-out;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+.navMargin {
+  height: 70px;
+}
+
+/* ---------------------- */
+/* About Section Styling */
+/* ---------------------- */
+
+.about {
+  padding: 50px 10px;
+  margin: 20px auto;
+  width: 95%;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.aboutContent {
+  width: 60%;
+  color: var(--text-primary);
+}
+
+.aboutContent h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.aboutContent p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.aboutLinks {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.aboutLinks a {
+  margin: 0px 8px;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--text-primary);
+  height: 50px;
+  width: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.2s all ease-in-out;
+}
+
+.aboutLinks a:hover {
+  background-color: var(--btn-primary);
+  border: 2px solid var(--border-color);
+}
+
+.aboutLinks a i {
+  font-size: 30px;
+}
+
+.aboutButtons {
+  padding: 20px;
+}
+
+.aboutButtons a {
+  margin: 0px 10px;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+
+  background-color: var(--bg-primary);
+  border: 2px solid var(--text-primary);
+  border-radius: 8px;
+  transition: 0.2s all ease-in-out;
+}
+
+.aboutButtons a:hover {
+  background-color: var(--btn-primary);
+  border: 2px solid var(--border-color);
+}
+
+/* ---------------------- */
+/* Skills Section Styling */
+/* ---------------------- */
+
+.skills {
+  padding: 30px;
+  margin: 20px auto;
+  width: 90%;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+}
+
+.skills h1 {
+  margin: 0px;
+  padding: 0 15px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.skillsCardWrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.skillsCard {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--bg-primary);
+  border-radius: 10px;
+}
+
+.skillsCardTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skillsNameWrapper {
+  padding: 5px 0;
+}
+
+.skillName {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: var(--btn-primary);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+/* ------------------------ */
+/* Projects Section Styling */
+/* ------------------------ */
+
+.projects {
+  padding: 30px;
+  margin: 20px auto;
+  width: 90%;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+}
+
+.projects h1 {
+  margin: 0px;
+  padding: 0 15px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
