@@ -21,18 +21,24 @@
     />
   </head>
   <body>
-    <nav>
-      <div class="navWrapper">
-        <h1 class="logo">Naresh Jaipal</h1>
-        <ul>
+    <header>
+      <nav class="navWrapper">
+        <div class="logoWrapper">
+          <h1 class="logo">Naresh Jaipal</h1>
+          <div class="navDropDown">
+            <i id="navDropDownBtn" class="fa fa-bars"></i>
+          </div>
+        </div>
+        <ul id="menuItems">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact Me</a></li>
         </ul>
-      </div>
-    </nav>
-    <div class="navMargin"></div>
+      </nav>
+    </header>
+
+    <div id="top" class="navMargin"></div>
 
     <section class="about" id="about">
       <div class="aboutContent">
@@ -104,8 +110,6 @@
             <div class="skillName">Java</div>
             <div class="skillName">Python</div>
             <div class="skillName">Git</div>
-            <div class="skillName">NextJs</div>
-            <div class="skillName">ReactJs</div>
           </div>
         </div>
       </div>
@@ -115,16 +119,95 @@
       <h1>Projects</h1>
       <div class="projectsCardWrapper">
         <div class="projectCard">
-          <h2 class="projectCardTitle">CodeSoft Tasks</h2>
-          <div class="projectName">CodeSoft Tasks</div>
-          <div class="projectDesc"></div>
+          <img src="./Netflix_clone.png" alt="Project Image" />
+          <div class="projectContentWrapper">
+            <h2 class="projectName">Netflix Clone</h2>
+            <div class="projectDesc">
+              Next.js, React Hooks, Magic Auth, Cookie, Framer-motion, JWT,
+              YouTube API, Hasura DB
+            </div>
+          </div>
+        </div>
+        <div class="projectCard">
+          <img src="./Pizza_Store.png" alt="Project Image" />
+          <div class="projectContentWrapper">
+            <h2 class="projectName">Pizza Stores</h2>
+            <div class="projectDesc">
+              Next.js, Airtable DB, Forsquare API, Unsplash API
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="contact" id="contact">
+      <h1>Contact Me</h1>
+      <form action="#" method="post">
+        <div class="contactTextareaWrapper">
+          <textarea
+            class="contactInput"
+            rows="6"
+            placeholder="Type message"
+            id="message"
+            name="message"
+            required
+          ></textarea>
+          <label class="contactLabel" for="message">Message</label>
+        </div>
+        <div class="contactInputFieldsWrapper">
+          <div class="contactInputWrapper">
+            <input
+              class="contactInput"
+              placeholder="Full name"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+            <label class="contactLabel" for="name">Full name</label>
+          </div>
+          <div class="contactInputWrapper">
+            <input
+              class="contactInput"
+              placeholder="Email address"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+            <label class="contactLabel" for="email">Email address</label>
+          </div>
+
+          <button class="contactSendBtn" type="submit">Send Message</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Naresh Jaipal</p>
+      <div class="footerLinks">
+        <a style="background-color: #000000" href="#"
+          ><i class="fa fa-github"></i
+        ></a>
+        <a style="background-color: #e1306c" href="#"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a style="background-color: #4267b2" href="#"
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a style="background-color: #0a66c2" href="#"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+      </div>
+
+      <a class="backToTop" href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
 
     <script
       src="https://kit.fontawesome.com/3930300603.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./script.js"></script>
   </body>
 </html>

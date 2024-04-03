@@ -1,15 +1,22 @@
-:root {
+/* :root {
   --bg-primary: #14131a;
-  --bg-secondary: #1c1b23ba;
+  --bg-secondary: #1c1b23d2;
   --btn-primary: #050114;
   --text-primary: #8b8a91;
   --border-color: #116ff3;
+} */
+
+:root {
+  --bg-primary: #043845;
+  --bg-secondary: #4aa4be;
+  --btn-primary: #e45929;
+  --text-primary: #edf4f8;
+  --border-color: #ffcd5e;
 }
 
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
   font-family: "Poppins", sans-serif;
 }
 
@@ -32,17 +39,18 @@ body {
 /* NavBar Styling */
 /* --------------- */
 
-nav {
+header {
   position: fixed;
   height: 70px;
   width: 100%;
   margin: 0;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
 
   color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99;
 }
 
 .navWrapper {
@@ -52,9 +60,46 @@ nav {
   justify-content: space-between;
 }
 
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo {
   font-size: 25px;
   font-weight: 700;
+  white-space: nowrap;
+}
+
+.navDropDown {
+  display: none;
+}
+
+.fa-x {
+  animation: rotateX 0.3s linear;
+}
+
+@keyframes rotateX {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-bars {
+  animation: rotateBar 0.3s linear;
+}
+
+@keyframes rotateBar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 nav ul {
@@ -95,11 +140,11 @@ nav ul li:hover::after {
 /* ---------------------- */
 
 .about {
-  padding: 50px 10px;
+  padding: 50px 30px;
   margin: 20px auto;
-  width: 95%;
-  background-color: var(--bg-secondary);
+  width: 90%;
   border-radius: 15px;
+  background-color: var(--bg-secondary);
 
   display: flex;
   align-items: center;
@@ -123,10 +168,12 @@ nav ul li:hover::after {
 }
 
 .image {
-  width: 250px;
-  height: 250px;
+  width: 210px;
+  height: 210px;
   object-fit: cover;
   border-radius: 50%;
+  border: 5px solid var(--text-primary);
+  margin-bottom: 20px;
 }
 
 .aboutLinks {
@@ -139,8 +186,8 @@ nav ul li:hover::after {
   margin: 0px 8px;
   background-color: var(--bg-primary);
   border: 2px solid var(--text-primary);
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 
   display: flex;
   align-items: center;
@@ -155,7 +202,7 @@ nav ul li:hover::after {
 }
 
 .aboutLinks a i {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .aboutButtons {
@@ -253,4 +300,426 @@ nav ul li:hover::after {
   font-size: 28px;
   font-weight: 700;
   color: var(--text-primary);
+}
+
+.projectsCardWrapper {
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.projectCard {
+  border-radius: 8px;
+  margin: 10px;
+
+  width: 260px;
+  height: 300px;
+  background-color: var(--bg-primary);
+}
+
+.projectCard img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 140px;
+  background-color: var(--bg-secondary);
+  object-fit: cover;
+}
+
+.projectContentWrapper {
+  padding: 10px;
+}
+
+.projectName {
+  margin: 3px 0;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-primary);
+}
+
+.projectDesc {
+  font-size: 15px;
+  font-weight: 300;
+  width: 100%;
+  overflow: hidden;
+  color: var(--text-primary);
+  height: 93px;
+}
+
+/* ------------------------ */
+/* Contact Section Styling */
+/* ------------------------ */
+
+.contact {
+  padding: 30px;
+  margin: 20px auto;
+  width: 90%;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+}
+
+.contact h1 {
+  margin: 0px;
+  padding: 0 15px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.contact form {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.contactTextareaWrapper {
+  width: 100%;
+  position: relative;
+  margin: 0px 10px;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--bg-primary);
+  border-radius: 12px;
+  color: var(--text-primary);
+  height: 200px;
+}
+
+.contactInputFieldsWrapper {
+  height: 200px;
+  width: 100%;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactInputWrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--bg-primary);
+  border-radius: 12px;
+  color: var(--text-primary);
+}
+
+.contactLabel {
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+}
+
+.contactInput {
+  width: 100%;
+  font-size: 18px;
+  background-color: transparent;
+  padding: 15px 15px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  color: var(--text-primary);
+}
+
+.contactInput:focus + .contactLabel,
+.contactInput:valid + .contactLabel {
+  background-color: var(--border-color);
+  opacity: 1;
+  transform: translate(5px, -20px);
+  font-size: 14px;
+  color: #fff;
+}
+
+.contactInput:focus,
+.contactInput:valid {
+  border: 2px solid var(--border-color);
+}
+
+.contactSendBtn {
+  width: 100%;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.contactSendBtn:hover {
+  background-color: var(--btn-primary);
+}
+
+/* ------------------------ */
+/* Footer Styling */
+/* ------------------------ */
+
+footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLinks a {
+  margin: 0 5px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLinks a {
+  color: #fff;
+}
+
+.backToTop {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-primary);
+  border: 1px solid var(--border-color);
+}
+
+.backToTop i {
+  font-size: 18px;
+  color: #fff;
+
+  animation: scaleUp 1.5s ease-in-out infinite;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 1100px) {
+  .aboutContent h1 {
+    font-size: 2.2rem;
+  }
+
+  .aboutContent p {
+    font-size: 19px;
+  }
+
+  .skillsCardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .skillsCard {
+    width: 44%;
+  }
+
+  .skillName {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 20px 0px;
+    height: auto;
+    align-items: flex-start;
+  }
+  .navWrapper {
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  nav ul {
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    transition: 0.4s all ease-in-out;
+  }
+
+  .active {
+    height: 220px;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .logoWrapper {
+    width: 100%;
+  }
+
+  .navDropDown {
+    display: block;
+    width: 50px;
+    height: 45px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.2s all linear;
+  }
+
+  .navDropDown:hover {
+    background-color: var(--bg-secondary);
+  }
+
+  .navDropDown i {
+    color: var(--text-primary);
+    font-size: 28px;
+  }
+
+  .about,
+  .skills,
+  .projects,
+  .contact {
+    width: 85%;
+    padding: 25px 5%;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .aboutContent {
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutLinks {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .aboutButtons {
+    padding: 12px;
+  }
+
+  .aboutButtons a {
+    margin: 0px 5px;
+    padding: 8px 12px;
+    font-size: 17px;
+  }
+
+  .skillsCard {
+    width: 90%;
+  }
+
+  .skillName {
+    font-size: 14px;
+  }
+
+  .projectsCardWrapper {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectCard {
+    margin: 12px;
+  }
+
+  .contact form {
+    width: 90%;
+    padding: 5%;
+    flex-direction: column;
+  }
+
+  .contactTextareaWrapper {
+    margin-bottom: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+
+  .footerLinks {
+    margin: 5px 0;
+  }
+
+  .footerLinks a {
+    margin: 0 5px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerLinks a {
+    color: #fff;
+  }
+
+  .backToTop {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--btn-primary);
+    border: 1px solid var(--border-color);
+  }
+
+  .backToTop i {
+    font-size: 18px;
+    color: #fff;
+
+    animation: scaleUp 1.5s ease-in-out infinite;
+  }
 }
