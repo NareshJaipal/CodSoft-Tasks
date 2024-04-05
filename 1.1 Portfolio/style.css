@@ -470,6 +470,7 @@ nav ul li:hover::after {
 }
 
 .contactInput {
+  height: 100%;
   width: 100%;
   font-size: 18px;
   background-color: transparent;

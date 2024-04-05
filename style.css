@@ -86,11 +86,11 @@ body {
 }
 
 .projectDesc {
-  padding: 0 5px;
+  padding: 5px 5px;
   font-size: 14px;
   text-align: center;
   color: #fff;
-  height: 85px;
+  height: 80px;
   overflow: hidden;
 }
 
@@ -112,7 +112,6 @@ body {
 
   font-size: 22px;
   font-weight: 500;
-  margin: 0 5px;
   padding: 5px;
   background-color: #000;
   border-radius: 3px;
@@ -127,7 +126,7 @@ body {
 }
 
 .cardBtn {
-  margin: 0 7px;
+  margin: 0 4px;
   padding: 6px 17px;
   text-align: center;
   background-color: #000;

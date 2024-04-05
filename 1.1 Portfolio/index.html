@@ -1,0 +1,254 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naresh Jaipal - Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navWrapper">
+        <div class="logoWrapper">
+          <h1 class="logo">Naresh Jaipal</h1>
+          <div class="navDropDown">
+            <i id="navDropDownBtn" class="fa fa-bars"></i>
+          </div>
+        </div>
+        <ul id="menuItems">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="top" class="navMargin"></div>
+    <main>
+      <section class="about" id="about">
+        <div class="aboutContent">
+          <h1>Hi, I'm Naresh Jaipal!</h1>
+          <p>
+            As a full-stack web developer, I love solving problems with code. My
+            core skills in Next.js, React.js, and Node.js allow me to build
+            seamless web applications from start to finish.
+          </p>
+          <div class="aboutLinks">
+            <a
+              class="githubIcon"
+              target="_blank"
+              href="https://github.com/NareshJaipal"
+              ><i class="fa fa-github"></i
+            ></a>
+            <a
+              class="instagramIcon"
+              target="_blank"
+              href="https://www.instagram.com/naresh_jaipal.dev/"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a
+              class="facebookIcon"
+              target="_blank"
+              href="https://web.facebook.com/naresh.jaipal.dev"
+              ><i class="fa fa-facebook"></i
+            ></a>
+            <a
+              class="linkedInIcon"
+              target="_blank"
+              href="https://www.linkedin.com/in/naresh-jaipal-03b233285/"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </div>
+          <div class="aboutButtons">
+            <a href="#contact">Contact Me</a>
+            <a target="_blank" href="./Naresh_Jaipal_Resume.pdf">Resume</a>
+          </div>
+        </div>
+        <div class="ImageWrapper">
+          <img class="image" src="./profile.jpg" alt="Profile Pic" />
+        </div>
+      </section>
+
+      <section class="skills" id="skills">
+        <h1>What I know</h1>
+        <div class="skillsCardWrapper">
+          <div class="skillsCard">
+            <h2 class="skillsCardTitle">Frontend</h2>
+            <div class="skillsNameWrapper">
+              <div class="skillName">HTML5</div>
+              <div class="skillName">CSS3</div>
+              <div class="skillName">Tailwind</div>
+              <div class="skillName">JavaScript</div>
+              <div class="skillName">TypeScript</div>
+              <div class="skillName">NextJs</div>
+              <div class="skillName">ReactJs</div>
+              <div class="skillName">Flutter</div>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h2 class="skillsCardTitle">Backend</h2>
+            <div class="skillsNameWrapper">
+              <div class="skillName">NodeJs</div>
+              <div class="skillName">ExpressJs</div>
+              <div class="skillName">Firebase Auth</div>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h2 class="skillsCardTitle">Database</h2>
+            <div class="skillsNameWrapper">
+              <div class="skillName">Sql</div>
+              <div class="skillName">NoSql</div>
+              <div class="skillName">Hasura</div>
+              <div class="skillName">PostgreSql</div>
+              <div class="skillName">MongoDB</div>
+              <div class="skillName">Firebase</div>
+            </div>
+          </div>
+
+          <div class="skillsCard">
+            <h2 class="skillsCardTitle">Others</h2>
+            <div class="skillsNameWrapper">
+              <div class="skillName">C</div>
+              <div class="skillName">C++</div>
+              <div class="skillName">Java</div>
+              <div class="skillName">Python</div>
+              <div class="skillName">Git</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <div class="projectsCardWrapper">
+          <div class="projectCard">
+            <img src="./Netflix_Clone.png" alt="Project Image" />
+            <div class="projectContentWrapper">
+              <h2 class="projectName">Netflix Clone</h2>
+              <div class="projectDesc">
+                Next.js, React Hooks, Magic Auth, Cookie, Framer-motion, JWT,
+                YouTube API, Hasura DB
+              </div>
+            </div>
+          </div>
+          <div class="projectCard">
+            <img src="./Pizza_Store.png" alt="Project Image" />
+            <div class="projectContentWrapper">
+              <h2 class="projectName">Pizza Stores</h2>
+              <div class="projectDesc">
+                Next.js, Airtable DB, Forsquare API, Unsplash API
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h1>Contact Me</h1>
+        <form id="contactForm">
+          <div class="contactTextareaWrapper">
+            <textarea
+              class="contactInput"
+              rows="6"
+              placeholder="Type message"
+              id="message"
+              name="message"
+              required
+            ></textarea>
+            <label class="contactLabel" for="message">Message</label>
+          </div>
+          <div class="contactInputFieldsWrapper">
+            <div class="contactInputWrapper">
+              <input
+                class="contactInput"
+                placeholder="Full name"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+              <label class="contactLabel" for="name">Full name</label>
+            </div>
+            <div class="contactInputWrapper">
+              <input
+                class="contactInput"
+                placeholder="Email address"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+              <label class="contactLabel" for="email">Email address</label>
+            </div>
+
+            <button class="contactSendBtn" type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Naresh Jaipal</p>
+      <div class="footerLinks">
+        <a
+          class="githubIcon"
+          target="_blank"
+          href="https://github.com/NareshJaipal"
+          ><i class="fa fa-github"></i
+        ></a>
+        <a
+          class="instagramIcon"
+          target="_blank"
+          href="https://www.instagram.com/naresh_jaipal.dev/"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a
+          class="facebookIcon"
+          target="_blank"
+          href="https://web.facebook.com/naresh.jaipal.dev"
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a
+          class="linkedInIcon"
+          target="_blank"
+          href="https://www.linkedin.com/in/naresh-jaipal-03b233285/"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+      </div>
+
+      <a class="backToTop" href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/3930300603.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
