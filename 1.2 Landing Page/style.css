@@ -1,0 +1,234 @@
+:root {
+  --bg-primary: #043845;
+  --bg-secondary: #4aa4be;
+  --btn-primary: #e45929;
+  --border-color: #ffcd5e;
+
+  --text-primary: #edf4f8;
+  --text-secondary: #100910;
+
+  --bg-gradient: linear-gradient(to right, #e73b47, #b44de7, #12c2e9);
+  --btn-gradient: linear-gradient(to right, #f04b56, #b44de7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  transition: 0.2s all ease-in-out;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bg-gradient);
+}
+
+.headerContent {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons a {
+  padding: 18px 9px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  margin: -1px;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactInfo .phone {
+  padding: 5px;
+}
+
+.separater {
+  position: relative;
+  margin: 0px 8px;
+  height: 4px;
+  width: 4px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+}
+
+.separater::after,
+.separater::before {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 4px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+}
+
+.separater::after {
+  top: 8px;
+}
+
+.separater::before {
+  top: -8px;
+}
+
+.contactInfo .email {
+  padding: 5px;
+}
+
+.headerButton {
+  padding: 7px 20px;
+  border: 2px solid var(--text-primary);
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navContent {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navContent .logo {
+  color: var(--text-secondary);
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navContent ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navContent ul li {
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  margin: 0px 8px;
+  font-weight: 500;
+
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s all ease-in-out;
+}
+
+.navContent ul li:hover {
+  background-color: #e73b47;
+  color: var(--text-primary);
+}
+
+.navContent ul li:last-child {
+  border-radius: 0px;
+  background-color: #e73b47;
+  padding: 25px 10px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.navContent a {
+  margin: 0px 10px;
+  border-radius: 0px;
+  background-color: var(--text-secondary);
+  padding: 25px 8px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.bannerWrapper {
+  background-image: url(./bannerImage.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.banner {
+  height: 80vh;
+  /* background: var(--bg-gradient); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000049;
+}
+
+.bannerContent {
+  width: 70%;
+  padding: 10px 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.bannerContent::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 100%;
+  width: 5px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #e73b47, #b44de7, #12c2e9);
+}
+
+.bannerHeader {
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.bannerTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.bannerDesc {
+  font-size: 16px;
+}
+
+.bannerBtn {
+  margin: 10px 0;
+  padding: 10px 20px;
+  width: fit-content;
+  border: 2px solid var(--text-primary);
+  /* background: var(--btn-gradient); */
+
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 24px;
+  cursor: pointer;
+}
