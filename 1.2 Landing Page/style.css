@@ -8,7 +8,7 @@
   --text-secondary: #100910;
 
   --bg-gradient: linear-gradient(to right, #e73b47, #b44de7, #12c2e9);
-  --btn-gradient: linear-gradient(to right, #f04b56, #b44de7);
+  --btn-gradient: linear-gradient(to right, #b44de7, #12c2e9);
 }
 
 * {
@@ -177,15 +177,14 @@ nav {
 
 .banner {
   height: 80vh;
-  /* background: var(--bg-gradient); */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00000049;
+  background-color: #0000009f;
 }
 
 .bannerContent {
-  width: 70%;
+  width: 80%;
   padding: 10px 10px;
   padding-left: 20px;
   position: relative;
@@ -224,11 +223,364 @@ nav {
   padding: 10px 20px;
   width: fit-content;
   border: 2px solid var(--text-primary);
-  /* background: var(--btn-gradient); */
 
   font-size: 17px;
   font-weight: 400;
   text-transform: uppercase;
   border-radius: 24px;
   cursor: pointer;
+}
+
+.menu {
+  background: var(--bg-gradient);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuContent {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contentCard {
+  width: 310px;
+}
+
+.contentTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentTitleIcon {
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--text-primary);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentTitleIcon i {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.contentTitleText {
+  font-size: 21px;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.contentDesc {
+  margin-top: 8px;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.about {
+  background-color: #fff;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutContent {
+  width: 80%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.aboutTextWrapper {
+  width: 60%;
+}
+
+.aboutHeader {
+  padding: 4px 8px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.aboutHeader::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 3px;
+  width: 100px;
+  background: var(--bg-gradient);
+  border-radius: 10px;
+}
+
+.aboutTitle {
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+}
+
+.aboutDesc {
+  font-size: 15px;
+  margin-top: 4px;
+  color: var(--text-secondary);
+}
+
+.aboutBtn {
+  width: fit-content;
+  margin: 10px 0;
+  padding: 8px 16px;
+  font-weight: 600;
+
+  border-radius: 20px;
+  background: var(--btn-gradient);
+  text-transform: uppercase;
+}
+
+.aboutImageWrapper {
+  width: 340px;
+  position: relative;
+  height: 100%;
+}
+
+.aboutImageWrapper::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 60px;
+  width: 330px;
+  border: 5px solid transparent;
+  z-index: 0;
+  border-image: linear-gradient(to right, #e73b47, #b44de7, #12c2e9) 1;
+}
+
+.aboutImageWrapper img {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  object-fit: cover;
+  height: 300px;
+  width: 340px;
+  z-index: 1;
+}
+
+.services {
+  background-color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.servicesContent {
+  margin: 30px auto;
+  width: 80%;
+}
+
+.serviceCardsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.servicesHeader {
+  padding: 4px 8px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.servicesHeader::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 3px;
+  width: 100px;
+  background: var(--bg-gradient);
+  border-radius: 10px;
+}
+
+.serviceCard {
+  width: 300px;
+  aspect-ratio: 6/4;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 40px;
+  border: 1px solid #fff;
+}
+
+.serviceCardImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.serviceCardTitle {
+  position: absolute;
+  bottom: -23px;
+  right: -1px;
+  background-color: #fff;
+  width: 230px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  color: #000;
+
+  border-radius: 50px 0 0 50px;
+}
+
+.serviceCardTitleIcon {
+  width: 45px;
+  height: 45px;
+  background: var(--btn-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceCardTitleIcon i {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.serviceCardTitleText {
+  margin-left: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #272525;
+  padding: 20px 0;
+}
+
+.footerContent {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+.footerSocialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerSocialIcons a {
+  width: 28px;
+  height: 28px;
+  margin: 0px 3px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerSocialIcons a i {
+  color: var(--text-primary);
+  font-size: 17px;
+}
+
+.twitterIcon {
+  background-color: #000000;
+}
+
+.twitterIcon:hover i {
+  font-weight: 900;
+  color: #000000;
+}
+
+.instagramIcon {
+  background-color: #e1306c;
+}
+
+.instagramIcon:hover i {
+  font-weight: 900;
+  color: #e1306c;
+}
+
+.youtubeIcon {
+  background-color: #e92222;
+}
+
+.youtubeIcon:hover i {
+  font-weight: 900;
+  color: #e92222;
+}
+
+.pinterestIcon {
+  background-color: #bd081c;
+}
+
+.pinterestIcon:hover i {
+  font-weight: 900;
+  color: #bd081c;
+}
+
+.facebookIcon {
+  background-color: #4267b2;
+}
+
+.facebookIcon:hover i {
+  font-weight: 900;
+  color: #4267b2;
+}
+
+.linkedInIcon {
+  background-color: #0a66c2;
+}
+
+.linkedInIcon:hover i {
+  font-weight: 900;
+  color: #0a66c2;
+}
+
+.tiktokIcon {
+  background-color: #000000;
+}
+
+.tiktokIcon:hover i {
+  font-weight: 900;
+  color: #000000;
+}
+
+.twitterIcon:hover,
+.instagramIcon:hover,
+.youtubeIcon:hover,
+.pinterestIcon:hover,
+.facebookIcon:hover,
+.linkedInIcon:hover,
+.tiktokIcon:hover {
+  transition: 0.2s all ease-in-out;
+  background-color: var(--text-primary);
 }
