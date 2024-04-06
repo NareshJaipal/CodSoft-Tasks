@@ -301,7 +301,6 @@ nav ul li:hover::after {
 .aboutButtons a:hover {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  /* border: 2px solid var(--border-color); */
 }
 
 /* ---------------------- */

@@ -9,9 +9,9 @@ $("#menuItems li").click(function () {
 });
 
 function sendContactMessage() {
-  const body = `<h2>Name: ${$("#name").val()}</h2><p>Email: ${$(
+  const body = `<h2>Name: ${$("#name").val()}</h2><h3>Email: ${$(
     "#email"
-  ).val()}</p><p>Message: ${$("#message").val()}</p>`;
+  ).val()}</h3><p>Message: ${$("#message").val()}</p>`;
 
   Email.send({
     Host: "smtp.elasticemail.com",
