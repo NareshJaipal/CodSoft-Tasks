@@ -1,17 +1,14 @@
-/* :root {
-  --bg-primary: #14131a;
-  --bg-secondary: #1c1b23d2;
-  --btn-primary: #050114;
-  --text-primary: #8b8a91;
-  --border-color: #116ff3;
-} */
-
 :root {
-  --bg-primary: #043845;
-  --bg-secondary: #4aa4be;
-  --btn-primary: #e45929;
-  --text-primary: #edf4f8;
-  --border-color: #ffcd5e;
+  --bg-primary: #4fc7e9;
+  --bg-secondary: #0c1e23;
+  --btn-primary: #0c1e23;
+  --text-primary: #dcf4fb;
+  --border-color: #0c1e23;
+
+  --bg-primary: #4fc7e9;
+  --bg-secondary: #0c1e23;
+  --text-primary: #dcf4fb;
+  --black: #060e10;
 }
 
 * {
@@ -81,7 +78,7 @@ i {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-primary);
+  background-color: var(--black);
 }
 
 /* --------------- */
@@ -93,7 +90,8 @@ header {
   height: 70px;
   width: 100%;
   margin: 0;
-  background-color: var(--bg-primary);
+  background-color: rgba(12, 30, 35, 0.6);
+  backdrop-filter: blur(16px);
 
   color: var(--text-primary);
   display: flex;
@@ -163,7 +161,6 @@ nav ul li {
   font-size: 16px;
   font-weight: 500;
   position: relative;
-  cursor: pointer;
 }
 
 nav ul li::after {
@@ -185,16 +182,32 @@ nav ul li:hover::after {
   height: 70px;
 }
 
+/* -------------------- */
+/* All Sections Styling */
+/* -------------------- */
+
+.about,
+.skills,
+.projects {
+  margin: 20px auto;
+  width: 90%;
+  background-color: var(--black);
+  border-radius: 15px;
+  color: var(--text-primary);
+
+  box-shadow: 5px 5px 25px var(--bg-secondary);
+  border-style: solid;
+  border-width: 2px;
+  border-image: linear-gradient(to bottom, #dcf4fb, rgba(220, 244, 251, 0));
+  border-image-slice: 1;
+}
+
 /* ---------------------- */
 /* About Section Styling */
 /* ---------------------- */
 
 .about {
   padding: 50px 30px;
-  margin: 20px auto;
-  width: 90%;
-  border-radius: 15px;
-  background-color: var(--bg-secondary);
 
   display: flex;
   align-items: center;
@@ -227,13 +240,13 @@ nav ul li:hover::after {
 }
 
 .aboutLinks {
-  padding: 12px 8px;
+  padding: 20px;
   display: flex;
   align-items: center;
 }
 
 .aboutLinks a {
-  margin: 0px 6px;
+  margin: 0px 8px;
 
   border: 2px solid var(--text-primary);
   height: 40px;
@@ -255,24 +268,40 @@ nav ul li:hover::after {
 }
 
 .aboutButtons {
-  padding: 12px;
+  padding: 20px;
+}
+
+.aboutButtons a:last-child {
+  background-color: unset;
+  color: rgba(220, 244, 251, 0.6);
+  border-style: solid;
+  border-width: 2px;
+  border-image: linear-gradient(to left, #dcf4fb, rgba(220, 244, 251, 0.4));
+  border-image-slice: 1;
 }
 
 .aboutButtons a {
-  margin: 0px 8px;
+  margin: 0px 10px;
   padding: 10px 15px;
   font-size: 18px;
   font-weight: 500;
 
-  background-color: var(--bg-primary);
-  border: 2px solid var(--text-primary);
+  background-color: var(--bg-secondary);
   border-radius: 8px;
+
+  border-style: solid;
+  border-width: 2px;
+  border-image: linear-gradient(to right, #dcf4fb, rgba(220, 244, 251, 0.4));
+  border-image-slice: 1;
+  box-shadow: 5px 5px 25px var(--bg-secondary);
+
   transition: 0.2s all ease-in-out;
 }
 
 .aboutButtons a:hover {
-  background-color: var(--btn-primary);
-  border: 2px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  /* border: 2px solid var(--border-color); */
 }
 
 /* ---------------------- */
@@ -281,10 +310,6 @@ nav ul li:hover::after {
 
 .skills {
   padding: 30px;
-  margin: 20px auto;
-  width: 90%;
-  background-color: var(--bg-secondary);
-  border-radius: 15px;
 }
 
 .skills h1 {
@@ -292,7 +317,6 @@ nav ul li:hover::after {
   padding: 0 15px;
   font-size: 28px;
   font-weight: 700;
-  color: var(--text-primary);
 }
 
 .skillsCardWrapper {
@@ -303,8 +327,8 @@ nav ul li:hover::after {
 .skillsCard {
   width: 100%;
   margin: 10px;
-  padding: 10px;
-  background-color: var(--bg-primary);
+  padding: 16px;
+  background-color: rgb(79, 199, 233, 0.2);
   border-radius: 10px;
 }
 
@@ -320,12 +344,12 @@ nav ul li:hover::after {
 
 .skillName {
   display: inline-block;
-  margin: 5px;
+  margin: 4px;
   padding: 5px 10px;
-  background-color: var(--btn-primary);
+  background-color: var(--bg-primary);
   font-size: 16px;
   font-weight: 400;
-  color: var(--text-primary);
+  color: var(--black);
   border-radius: 5px;
   border: 1px solid var(--border-color);
   white-space: nowrap;
@@ -337,10 +361,6 @@ nav ul li:hover::after {
 
 .projects {
   padding: 30px;
-  margin: 20px auto;
-  width: 90%;
-  background-color: var(--bg-secondary);
-  border-radius: 15px;
 }
 
 .projects h1 {
@@ -354,22 +374,26 @@ nav ul li:hover::after {
 .projectsCardWrapper {
   padding: 10px;
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
 }
 
 .projectCard {
   border-radius: 8px;
   margin: 10px;
 
-  width: 250px;
-  aspect-ratio: 4/4;
-  background-color: var(--bg-primary);
+  background-color: rgba(79, 200, 233, 0.4);
+  transition: 0.3s ease-out;
+}
+
+.projectCard:hover {
+  box-shadow: 14px 14px var(--bg-secondary);
+  transform: translate(-8px, -8px);
 }
 
 .projectCard img {
   border-radius: 8px 8px 0 0;
   width: 100%;
-  aspect-ratio: 4/3;
+  min-height: 280px;
   background-color: var(--bg-secondary);
   object-fit: cover;
 }
@@ -395,7 +419,6 @@ nav ul li:hover::after {
   width: 100%;
   overflow: hidden;
   color: var(--text-primary);
-  height: 93px;
 }
 
 /* ------------------------ */
@@ -406,8 +429,10 @@ nav ul li:hover::after {
   padding: 30px;
   margin: 20px auto;
   width: 90%;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   border-radius: 15px;
+
+  color: var(--text-primary);
 }
 
 .contact h1 {
@@ -470,7 +495,6 @@ nav ul li:hover::after {
 }
 
 .contactInput {
-  height: 100%;
   width: 100%;
   font-size: 18px;
   background-color: transparent;
@@ -691,6 +715,7 @@ footer p {
   }
 
   .aboutButtons {
+    margin: 4px 0;
     padding: 8px;
   }
 
@@ -771,11 +796,5 @@ footer p {
     color: #fff;
 
     animation: scaleUp 1.5s ease-in-out infinite;
-  }
-}
-
-@media (max-width: 450px) {
-  .projectCard {
-    width: 100%;
   }
 }
