@@ -1,6 +1,6 @@
-# CodeSoft Tasks
+# CodSoft Tasks
 
-A collection of my completed coding tasks from the CodeSoft program.
+A collection of my completed coding tasks from the CodSoft program.
 
 ## Tech Stack
 
